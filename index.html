@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps Automated Development Pipeline</title>
+
 <style>
 *{
     margin:0;
@@ -14,7 +21,7 @@ body{
 header{
     background:#02143d;
     color:#ffffff;
-    padding:25px;
+    padding:30px;
     text-align:center;
     box-shadow:0 0 20px rgba(0,140,255,0.4);
 }
@@ -22,7 +29,9 @@ header{
 header h1,
 header p,
 h2,
+h3,
 p,
+li,
 label,
 footer{
     text-shadow:
@@ -40,7 +49,7 @@ nav{
 nav a{
     color:#ffffff;
     text-decoration:none;
-    margin:0 18px;
+    margin:0 20px;
     font-weight:bold;
     text-shadow:0 0 8px #ffffff;
 }
@@ -56,19 +65,24 @@ section{
     background:rgba(255,255,255,0.08);
     border:1px solid rgba(255,255,255,0.15);
     border-radius:12px;
-    backdrop-filter:blur(8px);
     box-shadow:0 0 20px rgba(0,150,255,0.25);
 }
 
 h2{
-    color:#ffffff;
     margin-bottom:15px;
+}
+
+ul{
+    margin-left:25px;
+    line-height:2;
 }
 
 input,
 textarea{
     width:100%;
     padding:12px;
+    margin-top:8px;
+    margin-bottom:15px;
     background:#061c4d;
     color:white;
     border:1px solid #4db8ff;
@@ -94,16 +108,131 @@ button{
 
 button:hover{
     background:#00bfff;
-    box-shadow:
-        0 0 15px #00bfff,
-        0 0 30px #00bfff;
+    box-shadow:0 0 20px #00bfff;
 }
 
 footer{
     background:#02143d;
     text-align:center;
-    padding:18px;
+    padding:20px;
     margin-top:40px;
-    box-shadow:0 0 20px rgba(0,140,255,0.3);
 }
 </style>
+
+</head>
+<body>
+
+<header>
+    <h1>DevOps Automated Development Pipeline</h1>
+    <p>A Simple HTML Website Demonstrating the DevOps CI/CD Workflow</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#devops">DevOps</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <h2>Home</h2>
+    <p>
+        Welcome to this simple website. It introduces the DevOps Automated
+        Development Pipeline and highlights the importance of automation,
+        collaboration, and continuous software delivery.
+    </p>
+
+    <br>
+
+    <button onclick="showMessage()">Learn More</button>
+
+    <p id="message" style="margin-top:15px;"></p>
+</section>
+
+<section id="about">
+    <h2>About</h2>
+
+    <p>
+        DevOps is a culture and set of practices that brings together software
+        development and IT operations. It emphasizes automation, collaboration,
+        continuous testing, and rapid deployment to deliver high-quality
+        software efficiently.
+    </p>
+</section>
+
+<section id="devops">
+
+    <h2>DevOps Automated Development Pipeline</h2>
+
+    <p>
+        DevOps is a software development approach that combines Development
+        (Dev) and Operations (Ops) to improve collaboration, automate
+        workflows, and deliver software faster with greater reliability.
+    </p>
+
+    <br>
+
+    <h3>Pipeline Stages</h3>
+
+    <ul>
+        <li><strong>Plan:</strong> Define project requirements, tasks, and goals.</li>
+        <li><strong>Develop:</strong> Write and manage source code using Git and GitHub.</li>
+        <li><strong>Build:</strong> Automatically compile the application and resolve dependencies.</li>
+        <li><strong>Test:</strong> Run automated tests to verify quality and detect bugs early.</li>
+        <li><strong>Release:</strong> Prepare the application for deployment.</li>
+        <li><strong>Deploy:</strong> Automatically deploy the application to production or cloud servers.</li>
+        <li><strong>Monitor:</strong> Continuously monitor application performance and security.</li>
+        <li><strong>Feedback:</strong> Collect feedback and improve future releases.</li>
+    </ul>
+
+    <br>
+
+    <h3>Benefits of DevOps</h3>
+
+    <ul>
+        <li>✔ Faster software development and delivery</li>
+        <li>✔ Continuous Integration (CI)</li>
+        <li>✔ Continuous Deployment (CD)</li>
+        <li>✔ Better collaboration between developers and operations teams</li>
+        <li>✔ Improved software quality through automation</li>
+        <li>✔ Reduced deployment failures and downtime</li>
+        <li>✔ Continuous monitoring and faster issue resolution</li>
+        <li>✔ Higher customer satisfaction through frequent updates</li>
+    </ul>
+
+</section>
+
+<section id="contact">
+
+    <h2>Contact</h2>
+
+    <form>
+
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label>Message</label>
+        <textarea rows="5" placeholder="Write your message"></textarea>
+
+        <button type="submit">Send</button>
+
+    </form>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 DevOps Automated Development Pipeline | Created using HTML</p>
+</footer>
+
+<script>
+function showMessage(){
+    document.getElementById("message").innerHTML =
+    "DevOps helps teams build, test, and deploy software faster through automation and continuous integration & deployment.";
+}
+</script>
+
+</body>
+</html>
